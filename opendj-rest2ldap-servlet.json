@@ -62,7 +62,7 @@
             "authentication": {
                 "simple": {
                     "bindDN": "cn=Directory Manager",
-                    "bindPassword": "keystone.1549"
+                    "bindPassword": "xc.1549"
                 }
             }
         }
@@ -125,7 +125,7 @@
     //     // The search parameters to use for "search-simple" authentication. The
     //     // %s filter format parameters will be substituted with the
     //     // client-provided username, using LDAP filter string character escaping.
-    //     "searchBaseDN"         : "dc=uicds,dc=us",
+    //     "searchBaseDN"         : "dc=xchangecore,dc=us",
     //     "searchScope"          : "sub", // Or "one".
     //     "searchFilterTemplate" : "(&(objectClass=inetOrgPerson)(uid=%s))"
 
@@ -166,7 +166,7 @@
         // The REST APIs and their LDAP attribute mappings.
         "mappings": {
             "/users": {
-                "baseDN": "dc=uicds,dc=us",
+                "baseDN": "dc=xchangecore,dc=us",
                 "readOnUpdatePolicy": "controls",
                 "useSubtreeDelete": false,
                 "usePermissiveModify": true,
@@ -268,7 +268,7 @@
                     "groups": {
                         "reference": {
                             "ldapAttribute": "isMemberOf",
-                            "baseDN": "dc=uicds,dc=us",
+                            "baseDN": "dc=xchangecore,dc=us",
                             "writability": "readOnly",
                             "primaryKey": "cn",
                             "mapper": {
@@ -320,7 +320,7 @@
                 }
             },
             "/groups": {
-                "baseDN": "dc=uicds,dc=us",
+                "baseDN": "dc=xchangecore,dc=us",
                 "readOnUpdatePolicy": "controls",
                 "useSubtreeDelete": false,
                 "usePermissiveModify": true,
@@ -389,7 +389,7 @@
                     "members": {
                         "reference": {
                             "ldapAttribute": "uniqueMember",
-                            "baseDN": "dc=uicds,dc=us",
+                            "baseDN": "dc=xchangecore,dc=us",
                             "primaryKey": "cn",
                             "mapper": {
                                 "object": {
