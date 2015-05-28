@@ -62,7 +62,7 @@
             "authentication": {
                 "simple": {
                     "bindDN": "cn=Directory Manager",
-                    "bindPassword": "xc.1549"
+                    "bindPassword": "%SYSADMINPASS%"
                 }
             }
         }
